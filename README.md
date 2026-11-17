@@ -1,104 +1,114 @@
-# Exercice 01 — Ma première page web
+# Exercice 02 — Titres et paragraphes
 
-**Niveau 1 · Graine** · ★☆☆☆ · Durée : 20 min · Notions : `<!DOCTYPE>`, `<html>`, `<head>`, `<body>`, `<meta charset>`, `<title>`, `<h1>`, `<p>`, commentaires
+**Niveau 1 · Graine** · ★☆☆☆ · Durée : 30 min · Notions : `<h1>` à `<h6>`, `<p>`, `<strong>`, `<em>`, `<i>`, `<br>`, `<hr>`
 
-> Vous démarrez votre parcours de développeur web. Première mission : créer, de A à Z, une page qui vous présente.
+> Un agronome vous a envoyé le texte d'une fiche sur le maïs… mais sans aucune mise en forme. Votre mission : structurer ce texte avec les bonnes balises pour en faire une vraie page web.
 
 ## Objectifs
 
-- Créer un fichier HTML dans VS Code et l'ouvrir dans un navigateur.
-- Connaître par cœur la structure de base d'une page HTML.
-- Comprendre la différence entre `<head>` (informations sur la page) et `<body>` (contenu affiché).
-- Utiliser les outils du navigateur : code source et inspecteur.
+- Construire une hiérarchie de titres logique (`<h1>` → `<h2>` → `<h3>`).
+- Découper un texte en paragraphes avec `<p>`.
+- Choisir la bonne balise pour mettre en valeur un mot : `<strong>`, `<em>` ou `<i>`.
+- Savoir quand utiliser (et ne pas utiliser) `<br>` et `<hr>`.
 
 ## Fichiers fournis
 
-Aucun ! Ce dossier ne contient que cette consigne. C'est vous qui créez le fichier.
+```
+02-titres-paragraphes/
+├── README.md     ← cette consigne
+└── index.html    ← le texte brut, sans balises
+```
 
 ## Consigne
 
-1. Ouvrez ce dossier (`01-premiere-page`) dans VS Code (**Fichier → Ouvrir le dossier…**).
-2. Créez un nouveau fichier nommé exactement `index.html` (en minuscules, sans espace).
-3. Écrivez **à la main** (sans copier-coller, sans raccourci) la structure de base d'une page :
-   - la ligne `<!DOCTYPE html>` ;
-   - la balise `<html>` avec l'attribut `lang="fr"` ;
-   - un `<head>` qui contient :
-     - `<meta charset="UTF-8">`,
-     - `<meta name="viewport" content="width=device-width, initial-scale=1.0">`,
-     - un `<title>` : `Ma première page — Votre prénom` ;
-   - un `<body>` (vide pour l'instant).
-4. Dans le `<body>`, ajoutez un titre principal `<h1>` : `Bonjour, je m'appelle …` (avec votre prénom).
-5. Sous le titre, ajoutez un paragraphe `<p>` de 2 ou 3 phrases : qui vous êtes, pourquoi vous voulez devenir développeur ou développeuse web, et un fruit ou une plante que vous aimez.
-6. Juste au-dessus du `<h1>`, ajoutez un commentaire HTML : `<!-- Titre principal de la page -->`.
-7. Enregistrez (`Ctrl + S`) et ouvrez la page dans le navigateur :
-   - avec l'extension **Live Server** (clic droit sur le fichier → *Open with Live Server*),
-   - ou par double-clic sur le fichier dans l'explorateur de fichiers.
-8. Vérifiez :
-   - le texte de votre `<title>` s'affiche dans l'**onglet** du navigateur ;
-   - les accents (é, è, à, ç…) s'affichent correctement ;
-   - le commentaire n'apparaît **pas** sur la page.
-9. **Expérience** : supprimez la ligne `<meta charset="UTF-8">`, enregistrez, puis ouvrez la page **par double-clic**. Que deviennent les accents ? (Le résultat peut varier selon le navigateur.) Remettez ensuite la ligne.
-10. Affichez le code source de la page (`Ctrl + U`), puis ouvrez l'inspecteur (`F12` ou clic droit → *Inspecter*). Repérez votre `<h1>` dans l'inspecteur.
+Ouvrez `index.html` dans le navigateur **avant** de commencer : tout le texte est collé sur une seule ligne. C'est normal : en HTML, les retours à la ligne du code ne s'affichent pas. Seules les balises structurent la page.
+
+1. **Le titre principal** : entourez `Le maïs` d'une balise `<h1>`. Il ne doit y avoir **qu'un seul** `<h1>` dans la page.
+2. **Le sous-titre** : `Fiche culture` n'est pas une nouvelle partie, c'est une précision sur le titre. Mettez-le dans un simple `<p>`.
+3. **Les grandes parties** : repérez les 4 grandes parties du texte et mettez leur titre en `<h2>`.
+4. **Les sous-parties** : à l'intérieur des parties, repérez les titres de sous-parties et mettez-les en `<h3>`.
+5. **Les paragraphes** : chaque phrase ou groupe de phrases qui n'est pas un titre va dans un `<p>`.
+6. **Les mises en valeur** :
+   - le nom scientifique *Zea mays* va dans une balise `<i>` (voir l'indice 2) ;
+   - mettez en `<strong>` au moins deux groupes de mots **importants** : « la céréale la plus produite au monde » et « besoin d'eau régulièrement » ;
+   - mettez en `<em>` le mot « surtout », sur lequel on insiste.
+7. **La séparation** : ajoutez un `<hr>` juste avant les lignes « Fiche rédigée par » et « Date ».
+8. **Les crédits** : mettez « Fiche rédigée par : … » et « Date : … » dans **un seul** `<p>`, avec un `<br>` entre les deux. Remplacez les crochets par votre prénom et la date du jour.
+9. **Expérience** : dans un paragraphe, ajoutez 10 espaces et 3 retours à la ligne entre deux mots. Enregistrez et regardez le résultat. Que constatez-vous ? Annulez ensuite ce changement.
+10. Supprimez le commentaire `TODO` et remplacez-le par des commentaires qui indiquent les grandes parties de la page (`<!-- Partie : Présentation -->`…).
 
 ## Critères de réussite
 
-- [ ] Le fichier s'appelle `index.html` et se trouve dans le dossier `01-premiere-page`.
-- [ ] La première ligne est `<!DOCTYPE html>`.
-- [ ] La balise `<html>` a l'attribut `lang="fr"`.
-- [ ] Le `<head>` contient `meta charset`, `meta viewport` et un `<title>` personnalisé.
-- [ ] Le `<body>` contient exactement un `<h1>` et au moins un `<p>`.
-- [ ] Chaque balise ouverte est fermée (sauf `<meta>`, qui n'a pas de balise fermante).
-- [ ] Le code est indenté : chaque balise « enfant » est décalée de 2 espaces par rapport à son « parent ».
-- [ ] Les accents s'affichent correctement dans le navigateur.
+- [x] Il y a un seul `<h1>` dans la page.
+- [x] Les niveaux de titres se suivent sans saut : pas de `<h3>` directement après le `<h1>`.
+- [x] Il y a 4 `<h2>` et 4 `<h3>`.
+- [x] Plus aucun texte n'est « libre » dans le `<body>` : tout est dans une balise.
+- [x] *Zea mays* est dans une balise `<i>`.
+- [x] Il y a au moins deux `<strong>` et un `<em>`.
+- [x] `<br>` n'est utilisé qu'une seule fois, dans les crédits (et jamais pour « faire de l'espace »).
+- [x] Le code est indenté et commenté.
 
 ## Indices
 
 <details>
-<summary>Indice 1 — Dans quel ordre écrire les balises ?</summary>
+<summary>Indice 1 — Comment repérer la hiérarchie des titres ?</summary>
 
-Pensez à des boîtes rangées les unes dans les autres : `<html>` contient `<head>` et `<body>`. Le `<head>` se trouve **avant** le `<body>`. On ferme toujours une boîte avant de fermer celle qui la contient.
+Imaginez la table des matières d'un livre :
+
+```
+Titre du livre             → h1
+  Chapitre                 → h2
+    Partie d'un chapitre   → h3
+```
+
+Les 4 grandes parties de la fiche sont celles qui sont précédées d'une ligne vide dans le fichier. Une partie peut contenir directement un paragraphe, ou bien des sous-parties.
 
 </details>
 
 <details>
-<summary>Indice 2 — Rien ne s'affiche ?</summary>
+<summary>Indice 2 — <code>&lt;strong&gt;</code>, <code>&lt;em&gt;</code> ou <code>&lt;i&gt;</code> ?</summary>
 
-- Avez-vous bien enregistré le fichier (`Ctrl + S`) ? Un point blanc à côté du nom de l'onglet dans VS Code signifie « non enregistré ».
-- Votre texte est-il bien **dans** le `<body>` ? Ce qui est dans le `<head>` ne s'affiche pas sur la page.
-- L'extension du fichier est-elle bien `.html` (et pas `.html.txt`) ?
+- `<strong>` : le contenu est **important** (affiché en gras par défaut).
+- `<em>` : on **insiste** sur un mot, comme quand on le prononce plus fort (affiché en italique par défaut).
+- `<i>` : le texte est d'une autre « nature » que le reste, **sans** importance particulière : un mot étranger, un terme technique… ou un **nom scientifique** d'espèce. C'est ce que recommande la spécification HTML.
+
+`<em>` et `<i>` s'affichent tous les deux en italique, mais ils n'ont pas le même **sens**. Un lecteur d'écran, par exemple, peut prononcer différemment un `<em>`.
 
 </details>
 
 <details>
-<summary>Indice 3 — Le raccourci Emmet (pour la suite)</summary>
+<summary>Indice 3 — Où placer le <code>&lt;hr&gt;</code> et le <code>&lt;br&gt;</code> ?</summary>
 
-Une fois que vous savez écrire la structure de mémoire, VS Code peut la générer pour vous : tapez `!` puis appuyez sur `Tab`. Pensez ensuite à remplacer `lang="en"` par `lang="fr"`.
+`<hr>` et `<br>` sont des balises **vides** : elles n'ont pas de balise fermante. On n'écrit donc jamais `</br>` ni `</hr>`.
+
+Le `<br>` se place **à l'intérieur** du paragraphe, entre les deux lignes à séparer.
 
 </details>
 
 ## Bonus
 
-- Ajoutez un deuxième paragraphe : ce que vous aimeriez créer comme site web à la fin de la formation.
-- Créez une copie de votre fichier et changez seulement le `<title>`. Ouvrez les deux pages dans deux onglets : voyez-vous la différence ?
+- Ajoutez une partie « Le saviez-vous ? » avec un `<h2>` et un paragraphe : le maïs est une plante dite « en C4 », très efficace pour transformer la lumière en matière (photosynthèse).
+- Ajoutez la source de la fiche dans un `<p>` avec la balise `<cite>` : `<cite>FAO — Organisation des Nations unies pour l'alimentation et l'agriculture</cite>`.
 
 ## Questions de compréhension
 
-1. Quelle est la différence entre le `<head>` et le `<body>` ?
-2. À quoi sert l'attribut `lang="fr"` ? (Pensez aux lecteurs d'écran et aux moteurs de recherche.)
-3. À quoi sert la ligne `<!DOCTYPE html>` ?
-4. Pourquoi est-il utile d'écrire des commentaires dans son code, alors qu'ils ne s'affichent pas ?
+1. Pourquoi ne doit-il y avoir qu'un seul `<h1>` par page ? (Pensez aux moteurs de recherche.)
+2. Pourquoi ne faut-il pas choisir une balise de titre (`<h2>`, `<h3>`…) pour sa **taille** d'affichage ?
+3. Quelle est la différence entre `<strong>` et `<b>` ? Entre `<em>` et `<i>` ?
+4. Que fait le navigateur quand il rencontre plusieurs espaces ou retours à la ligne dans le code ?
 
 ## Lien avec le brief PlantEvo
 
-Toutes les pages de votre projet PlantEvo Viewer commencent par cette structure. Le jury regardera votre code source : un squelette propre et bien indenté est la première chose qu'il verra.
+Vos pages sur les végétaux auront des titres, des sous-titres et des noms scientifiques (*Marchantia*, *Pteridium aquilinum*…). Le critère de performance « Structure et utilisation efficace des balises » sera évalué : une hiérarchie de titres propre fait la différence.
 
 ## Ressources
 
-- [MDN — Structure d'un document HTML](https://developer.mozilla.org/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [MDN — `<head>`](https://developer.mozilla.org/fr/docs/Web/HTML/Element/head)
-- [MDN — `<title>`](https://developer.mozilla.org/fr/docs/Web/HTML/Element/title)
+- [MDN — Les éléments de titre `<h1>` à `<h6>`](https://developer.mozilla.org/fr/docs/Web/HTML/Element/Heading_Elements)
+- [MDN — `<p>`](https://developer.mozilla.org/fr/docs/Web/HTML/Element/p)
+- [MDN — `<strong>`](https://developer.mozilla.org/fr/docs/Web/HTML/Element/strong) · [`<em>`](https://developer.mozilla.org/fr/docs/Web/HTML/Element/em) · [`<i>`](https://developer.mozilla.org/fr/docs/Web/HTML/Element/i)
+- [MDN — `<br>`](https://developer.mozilla.org/fr/docs/Web/HTML/Element/br) · [`<hr>`](https://developer.mozilla.org/fr/docs/Web/HTML/Element/hr)
 - [Validateur W3C](https://validator.w3.org/#validate_by_input)
 
 ---
 
-Exercice suivant : [02 — Titres et paragraphes](../02-titres-paragraphes/README.md)
+Exercice suivant : [03 — Les listes](../03-listes/README.md)
